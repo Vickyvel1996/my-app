@@ -16,11 +16,11 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: docker build -t vickyssssd .
+        cmd: docker build -t vickyssssds .
 
     - name: run docker 
       ansible.builtin.command:
-        cmd: docker run -itd --name ganeshssssd -p 8096:8080 vickyssssd
+        cmd: docker run -itd --name ganeshssssds -p 8097:8080 vickyssssds
 
     
 
