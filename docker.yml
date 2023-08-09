@@ -10,11 +10,11 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: docker build -t vickysss .
+        cmd: docker build -t vickyssss .
 
     - name: run docker 
       ansible.builtin.command:
-        cmd: docker run -itd --name ganeshsss -p 8093:8080 vickysss
+        cmd: docker run -itd --name ganeshssss -p 8095:8080 vickyssss
 
     - name: copy war
       ansible.builtin.copy:
