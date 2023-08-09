@@ -1,6 +1,8 @@
 - name: copy module
   hosts: ansible
   become: true
+  vars:
+    src_path: /root/Dockerfile
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
@@ -10,7 +12,7 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: docker buid -t vicky .
+        cmd: "docker buid -t vicky . {{ src_path }}"
 
     - name: run docker 
       ansible.builtin.command:
