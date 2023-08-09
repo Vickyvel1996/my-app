@@ -5,7 +5,7 @@
       ansible.builtin.copy:
         src: /var/lib/jenkins/workspace/my project/Dockerfile
         dest: /root
-        mode: '0644'
+        mode: '0777'
 
     - name: Run the Linux command
       ansible.builtin.command:
