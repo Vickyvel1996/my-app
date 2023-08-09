@@ -10,15 +10,15 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: docker build -t vicky .
+        cmd: docker build -t vickys .
 
     - name: run docker 
       ansible.builtin.command:
-        cmd: docker run -itd --name ganesh -p 8090:8080 vicky
+        cmd: docker run -itd --name ganesh -p 8091:8080 vickys
 
     - name: copy war
       ansible.builtin.command:
-        src: /target/newapp.war
+        src: /var/lib/jenkins/workspace/my project/target/newapp.war
         dest: /usr/local/tomcat/webapps/
         mode: '0644'
 
