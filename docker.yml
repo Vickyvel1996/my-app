@@ -17,7 +17,7 @@
         cmd: docker run -itd --name ganeshss -p 8092:8080 vickyss
 
     - name: copy war
-      ansible.builtin.command:
+      ansible.builtin.copy:
         src: /var/lib/jenkins/workspace/my project/target/newapp.war
         dest: /usr/local/tomcat/webapps/
         mode: '0644'
