@@ -18,8 +18,8 @@
 
     - name: copy war
       ansible.builtin.copy:
-        src: /target/newapp.war
-        dest: /usr/local/tomcat/webapps/
+        src: /var/lib/jenkins/workspace/my project/target/newapp.war
+        dest: /home/ec2-user
         mode: '0644'
 
 
