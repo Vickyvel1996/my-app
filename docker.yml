@@ -10,7 +10,7 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: "docker buid -t vicky . /root/Dockerfile
+        cmd: docker buid -t vicky . /root/Dockerfile
 
     - name: run docker 
       ansible.builtin.command:
@@ -18,7 +18,9 @@
 
     - name: copy war
       ansible.builtin.command:
-        cmd: cp target/newapp.war /usr/local/tomcat/webapps/
+        src: /target/newapp.war
+        dest: /usr/local/tomcat/webapps/
+        mode: '0644'
 
 
 
