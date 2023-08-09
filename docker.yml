@@ -4,7 +4,7 @@
   tasks:
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: /var/lib/jenkins/workspace/my\ project/Dockerfile
+        src: /var/lib/jenkins/workspace/my project/Dockerfile
         dest: /root
         mode: '0644'
 
