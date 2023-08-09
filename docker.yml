@@ -7,17 +7,17 @@
         dest: /root
         mode: '0644'
 
-     - name: Run the Linux command
-       ansible.builtin.command:
-         cmd: docker buid -t vicky .
+    - name: Run the Linux command
+      ansible.builtin.command:
+        cmd: docker buid -t vicky .
 
-     - name: run docker 
-       ansible.builtin.command:
-         cmd: docker run -itd --name ganesh -p 8090:8080 vicky
+    - name: run docker 
+      ansible.builtin.command:
+        cmd: docker run -itd --name ganesh -p 8090:8080 vicky
 
-      - name: copy war
-        ansible.builtin.command:
-          cmd: cp target/newapp.war /usr/local/tomcat/webapps/
+    - name: copy war
+      ansible.builtin.command:
+        cmd: cp target/newapp.war /usr/local/tomcat/webapps/
 
 
 
