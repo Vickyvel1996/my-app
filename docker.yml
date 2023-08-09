@@ -8,19 +8,21 @@
         dest: /root
         mode: '0644'
 
-    - name: Run the Linux command
-      ansible.builtin.command:
-        cmd: docker build -t vickyssss .
-
-    - name: run docker 
-      ansible.builtin.command:
-        cmd: docker run -itd --name ganeshssss -p 8095:8080 vickyssss
-
     - name: copy war
       ansible.builtin.copy:
         src: /var/lib/jenkins/workspace/my project/target/newapp.war
         dest: /home/ec2-user
         mode: '0644'
+
+    - name: Run the Linux command
+      ansible.builtin.command:
+        cmd: docker build -t vickyssssd .
+
+    - name: run docker 
+      ansible.builtin.command:
+        cmd: docker run -itd --name ganeshssssd -p 8096:8080 vickyssssd
+
+    
 
 
 
