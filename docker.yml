@@ -14,13 +14,17 @@
         dest: /home/ec2-user
         mode: '0644'
 
+
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: docker build -t vickyssssdss .
+        cmd: docker build -t vickyssssdsss .
 
     - name: run docker 
       ansible.builtin.command:
-        cmd: docker run -itd --name ganeshssssdss -p 8098:8080 vickyssssdss
+        cmd: docker run -itd --name ganeshssssdsss -p 8099:8080 vickyssssdsss
+
+    - name: copy
+      shell: docker cp /home/ec2-user/newapp.war vickyssssdsss:/usr/local/tomcat/webapps
 
     
 
