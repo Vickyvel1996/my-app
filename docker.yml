@@ -17,14 +17,14 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
-        cmd: docker build -t vickyssssdsss .
+        cmd: docker build -t vic .
 
     - name: run docker 
       ansible.builtin.command:
-        cmd: docker run -itd --name ganeshssssdsss -p 8099:8080 vickyssssdsss
+        cmd: docker run -itd --name prakash -p 8085:8080 vic
 
     - name: copy
-      shell: docker cp /home/ec2-user/newapp.war vickyssssdsss:/usr/local/tomcat/webapps
+      shell: docker cp /home/ec2-user/newapp.war prakash:/usr/local/tomcat/webapps
 
     
 
