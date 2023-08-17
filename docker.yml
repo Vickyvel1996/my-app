@@ -18,6 +18,11 @@
     - name: Run the Linux command
       command: docker build -t vicky /root
 
+
+    - name: rm
+      ansible.builtin.command:
+        cmd: docker rm -f hari
+
     - name: run docker 
       ansible.builtin.command:
         cmd: docker run -itd --name hari -p 8085:8080 vicky
