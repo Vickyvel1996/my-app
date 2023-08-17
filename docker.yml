@@ -17,6 +17,7 @@
 
     - name: Run the Linux command
       ansible.builtin.command:
+        src: /root
         cmd: docker build -t vicky .
 
     - name: run docker 
