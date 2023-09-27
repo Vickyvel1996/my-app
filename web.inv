@@ -1,3 +1,2 @@
 [ansible]
-3.104.116.228 ansible_user=ec2-user 
-13.233.193.255 ansible_user=ec2-user 
+52.66.212.171 ansible_user=ec2-user
